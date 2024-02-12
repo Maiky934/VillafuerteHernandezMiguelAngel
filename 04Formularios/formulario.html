@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/style.css"> <!-- Agrega tu hoja de estilos CSS -->
+    <script src="./js/validacion.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A3EED6; /* Cambia el color de fondo aquí */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .main-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .formulario {
+            padding: 20px;
+        }
+
+        .parrafo {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .form {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="formulario">
+            <div class="parrafo">
+                <p>Todos los formularios que se manejan en la web utilizan métodos para el envío o respuesta de la información. Los más comunes son:</p>
+                <br>
+                <strong>GET:</strong> Este método se encarga de enviar la información por la URL o salida estándar del navegador, esto propicia que se pueda visualizar toda la información del formulario.
+                <br>
+                <strong>POST:</strong> Este método se encarga de enviar la información por la URL pero de forma oculta, lo que ofrece cierto nivel de seguridad. Este método se usa comúnmente para insertar un nuevo registro dentro de los sistemas.
+            </div>
+        </div>
+        <div class="form">
+            <form method="get" name="formulario" onsubmit="return validar(this)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" min="0" max="100">
+                <label for="email">Correo:</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" name="enviar" value="Enviar Datos">
+                <input type="reset" name="borrar" value="Borrar Datos">
+            </form>
+        </div>
+        <hr>
+        <div class="main-container">
+            <button><a href="../index.html">Inicio</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

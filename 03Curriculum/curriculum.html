@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Miguel Angel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #left-column {
+            background-color: #242f3d;
+            color: #f2f2f2;
+            padding: 20px;
+            flex: 0 0 30%;
+        }
+
+        #right-column {
+            background-color: #84f8fa; /* Puedes ajustar el color de fondo según tus preferencias */
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .images img {
+            max-width: 48%;
+            height: auto;
+        }
+
+        .strengths-weaknesses {
+            margin-top: 20px;
+            display: flex; /* Utiliza flexbox para organizar las tablas en una fila */
+            justify-content: space-between;
+        }
+
+        table {
+            width: 48%; /* Cambiado a 48% para permitir espacio entre las tablas */
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 3px solid #333; /* Grosor de línea aumentado a 3px, color oscuro */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="left-column">
+        <h1><center>MIGUEL ANGEL VILLAFUERTE HERNANDEZ</center></h1>
+        <img src="foto.jpg" alt="Tu Foto">
+        <p>Información del Estudiante:</p>
+        <p>Estudiante de nivel superior en la carrera de ingenieria en sistemas computacionales en la institucion UTC en el plantel de londres cursando el octavo cuatrimestre de la carrera con conocminetos de metodologias agiles, mi especialidas es scrum, actualmente soy el product owner en el desarrollo de un videojuego en 2D</p>
+        <div class="Isignias">
+            <img src="cer1.png" alt="Imagen 1">
+            <img src="cer2.png" alt="Imagen 2">
+        </div>
+    </div>
+
+    <div id="right-column">
+
+        <section class="education">
+            <h1><n>DATOS GENERALES</n></h1>
+            <h2>Educación</h2>
+            <p><strong>Universidad tres culturas</strong>, Ciudad de México, Mexico</p>
+            <p>Ing. en Sistemas Computacionales, Fecha de inicio 12/7/2020 - Fecha de finalización 12/7/2024</p>
+        </section>
+
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Lenguajes de Programación: JAVA, PYTHON, C++, PHP, CEUDOCODIGO</li>
+                <li>Tecnologías Web: UNITY, GITHUB, </li>
+                <li>Base de Datos: MYSQL WORKBENCH</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li><strong>Desarrollo de un videpjuego 2D</strong>: Un shooter de un jugador con diseño de las caricaturas de los años 30 remasterizadas con una historia que dara la reflexion de no buscar la aprobacion de los demas en ecceso.</li>
+                <li><strong>Casa inteligente prototipo de un proyecto</strong>: Es una maqueta de una casa habitacion del cuidado de las personas descapacitadas teniando la funcion de automatizar las necesidadees basicas de las personas a base de sensores.</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>Email: angel2002@gmail.com</p>
+            <p>LinkedIn: https://www.linkedin.com/in/miguel-angel-villafuerte-hernández-1754392a3/</p>
+            <p>Github: https://github.com/Maiky934</p>
+        </section>
+
+        <section class="strengths-weaknesses">
+            <table>
+                <tr>
+                    <th>Fortalezas</th>
+                </tr>
+                <tr>
+                    <td>Creativo</td>
+                </tr>
+                <tr>
+                    <td>Perseverante</td>
+                </tr>
+                <tr>
+                    <td>Competitivo</td>
+                </tr>
+                <tr>
+                    <td>Respetuoso</td>
+                </tr>
+                <tr>
+                    <td>Altruista</td>
+                </tr>
+            </table>
+            
+            <table>
+                <tr>
+                    <th>Debilidades</th>
+                </tr>
+                <tr>
+                    <td>Distraído</td>
+                </tr>
+                <tr>
+                    <td>Antisocial</td>
+                </tr>
+                <tr>
+                    <td>Dependencia</td>
+                </tr>
+                <tr>
+                    <td>Antipatía</td>
+                </tr>
+                <tr>
+                    <td>Inseguridad</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario para calcular la comision de 10% de las tres ventas del mes mas el sueldo base de un empleado
+            </p>
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    ingresa tu sueldo base:
+                                </td>
+                                <td>
+                                    <input type="text" name="sueldo" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese la venta 1:
+                                </td>
+                                <td>
+                                    <input type="text" name="venta1" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese la venta 2:
+                                </td>
+                                <td>
+                                    <input type="text" name="venta2" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese la venta 3:
+                                </td>
+                                <td>
+                                    <input type="text" name="venta3" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular sueldo + comision" name="enviar" onclick="interes()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    su saldo total con el interes de 10% de comision mensual es de:
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio2()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+        <div class="">
+            <button><a href="../index.html">Inicio</a></button>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

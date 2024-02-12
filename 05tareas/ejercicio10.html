@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario par calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si este se le asigna
+                como un porcentaje de su salario mensual que depende de su antigüedad en la empresa de acuerdo con la
+                sig. Tabla:
+            </p>
+            <p>
+
+                Tiempo       |                                                 Utilidad
+            </p>
+            <p>
+
+                
+                Menos de 1 año |                                               5% del salario
+            </p>
+            <p>
+
+                1 año o más y menos de 2 años     |                           7% del salario
+            </p>
+            <p>
+
+                2 años o más y menos de 5 años            |                   10% del salario
+            </p>
+            <p>
+
+                5 años o más y menos de 10 años       |                       15% del salario
+            </p>
+            <p>
+
+                10 años o más                      |                          20% del salario
+            </p>
+
+                
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    ingrea la cantidad total de meses trabajados en la empresa:
+                                </td>
+                                <td>
+                                    <input type="text" name="num1" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrea el sueldo/salario mensual:
+                                </td>
+                                <td>
+                                    <input type="text" name="num2" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular el sueldo" name="enviar"
+                                        onclick="utilidades()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    el total de utilidades es:
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar"
+                                        onclick="borrarDatosEjercicio10()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+                <div class="">
+                    <button><a href="../index.html">Inicio</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

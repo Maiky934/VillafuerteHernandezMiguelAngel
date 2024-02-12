@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario para calcular dos numeros, si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y si no que los sume.
+            </p>
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    ingrese el primer numero:
+                                </td>
+                                <td>
+                                    <input type="text" name="num1" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese el segundo numero:
+                                </td>
+                                <td>
+                                    <input type="text" name="num2" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular" name="enviar" onclick="numeros()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    resultado:
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio7()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+        <div class="">
+            <button><a href="../index.html">Inicio</a></button>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

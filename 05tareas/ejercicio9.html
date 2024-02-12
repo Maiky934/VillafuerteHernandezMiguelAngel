@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario para determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas
+                extras trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se
+                consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las
+                horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se pagan las horas normales y el
+                resto al triple.
+            </p>
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    cunto te pagan por hora?:
+                                </td>
+                                <td>
+                                    <input type="text" name="num1" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese el total de horas trabajadas:
+                                </td>
+                                <td>
+                                    <input type="text" name="num2" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular el sueldo" name="enviar" onclick="horas()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    el total de paga es:
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar"
+                                        onclick="borrarDatosEjercicio9()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+                <div class="">
+                    <button><a href="../index.html">Inicio</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

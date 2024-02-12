@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario para calcular la edad de una persona
+            </p>
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    ingrese el año de nacimiento:
+                                </td>
+                                <td>
+                                    <input type="date" name="año" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular edad" name="enviar" onclick="edad()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    tu edad es:
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio6()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+        <div class="">
+            <button><a href="../index.html">Inicio</a></button>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

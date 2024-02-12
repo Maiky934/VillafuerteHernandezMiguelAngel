@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01EstructuraBasica/css/style.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text">
+            <p>
+                Formulario para calcular el porcentaje de alumnos
+            </p>
+            <div class="form">
+                <form method="post" name="formulario">
+                    <div class="table-content">
+                        <table>
+                            <tr>
+                                <td>
+                                    ingrese el total de alumnas(mujeres):
+                                </td>
+                                <td>
+                                    <input type="text" name="mujeres" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ingrese el total de alumnos(hombres):
+                                </td>
+                                <td>
+                                    <input type="text" name="hombres" onkeypress="return validar(event)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Calcular porcentaje de alumnos" name="enviar" onclick="alumnos()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    porcentaje de alumnas(mujeres):
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoII" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    porcentaje de alumnos(hombres):
+                                </td>
+                                <td>
+                                    <input type="text" readonly="readonly" name="sueldoI" id="cantidadI">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <input type="button" value="Borrar Datos" name="borrar" onclick="borrarDatosEjercicio5()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <hr>
+        <div class="">
+            <button><a href="../index.html">Inicio</a></button>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

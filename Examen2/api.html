@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Juegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e4faff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #7fc9f8;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        #searchForm {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #searchInput {
+            width: 60%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #gameList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #gameList li {
+            margin-bottom: 20px;
+            background-color: #bbfbf7;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .game-info {
+            padding: 20px;
+        }
+        .game-info h2 {
+            margin-top: 0;
+        }
+        .game-info p {
+            margin-bottom: 0;
+        }
+        .game-info img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Buscador de Juegos</h1>
+        
+        <form id="searchForm">
+            <input type="text" id="searchInput" name="searchInput" placeholder="Buscar Juego...">
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <ul id="gameList"></ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const apiKey = 'c8f8817fb64c495d966f7255c0e99441';
+            const apiUrl = 'https://api.rawg.io/api/games';
+
+            const searchForm = document.getElementById('searchForm');
+            const searchInput = document.getElementById('searchInput');
+            const gameList = document.getElementById('gameList');
+
+            searchForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm !== '') {
+                    searchGames(searchTerm);
+                }
+            });
+
+            function searchGames(searchTerm) {
+                const url = `${apiUrl}?key=${apiKey}&search=${encodeURIComponent(searchTerm)}`;
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Error de red: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        displayGames(data.results);
+                    })
+                    .catch(error => {
+                        gameList.innerHTML = `Error: ${error.message}`;
+                    });
+            }
+
+            function displayGames(games) {
+                gameList.innerHTML = '';
+                if (games.length === 0) {
+                    gameList.innerHTML = '<li>No se encontraron juegos</li>';
+                } else {
+                    games.forEach(game => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <div class="game-info">
+                                <img src="${game.background_image}" alt="${game.name}" width="150">
+                                <h2>${game.name}</h2>
+                                <p>Género: ${game.genres.map(genre => genre.name).join(', ')}</p>
+                                <p>Lanzamiento: ${game.released}</p>
+                                <p>Puntuación: ${game.rating}</p>
+                            </div>
+                        `;
+                        gameList.appendChild(listItem);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
